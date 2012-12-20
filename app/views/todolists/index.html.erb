@@ -1,0 +1,10 @@
+<h2>Todolist - NestedResources </h2>
+<a class="ajax-link" href="/todolists/search_form" data-callback-method ="loadForm" data-type="GET" data-id="#search-form">Search</a> 
+<div id="search-form" style="display:none"></div>
+<br/>
+<div id="form-edit"></div>
+<div id="list">
+	<%= render :partial => "/todolists/list" %>
+</div>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>

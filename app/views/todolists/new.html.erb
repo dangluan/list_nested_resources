@@ -1,0 +1,3 @@
+<input type="text" name="new-name" value="<%= @todolist.name %>" id="new-name" class="new-name" size="50"/>
+<a class="ajax-link button" href="/todolists" data-callback-method="saveList" data-type="POST">create</a>
+<a class="ajax-link close button" href="#" data-callback-method="closeForm" data-type="GET" data-id="#new-form">close</a>

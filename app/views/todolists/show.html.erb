@@ -1,0 +1,31 @@
+<h3> List Detail </h3>
+<h3><%= @todolist.name %></h3>
+<div id='todolist_id_data' style='display:none;'><%= @todolist.id %></div>
+<div id="items">
+	<div id="uncheck">
+		<% @uncheck_items.each do |u| %>
+			<li class="item">
+				<%= check_box_tag(u.name,u.id,false,"myid" => u.id)%><span><%= u.name %></span><a class="ajax-link delete" href="/todolists/<%= @todolist.id %>/items/<%= u.id %>" data-callback-method="deleteElement" data-type="DELETE">delete</a>
+			</li>
+		<% end %>
+	</div>
+		<p id="list-checked"><b> list checked : </b></p>
+	<div id="checked">
+
+		<% @checked_items.each do |c| %>
+			<li class="item">
+				<%= check_box_tag(c.name,c.id,true,"myid" => c.id)%><span><%= c.name %></span><a class="ajax-link" href="/todolists/<%= @todolist.id %>/items/<%= c.id %>" data-callback-method="deleteElement" data-type="DELETE">delete</a>
+			</li>
+		<% end %>
+	</div>
+	
+</div>
+<div id="new-form" style = "display:none"></div>
+<div class="menu show-todolist-menu">
+	<!-- items -->
+	<a class="ajax-link button" href="/todolists/<%= @todolist.id %>/items/new" data-callback-method="loadForm" data-type="GET" data-id="#new-form" > new item </a>
+	<a class="ajax-link button" href="/todolists/<%= @todolist.id %>/items/edit_multiple_item" data-callback-method="loadForm" data-type="GET" data-id="#list"> edit </a>
+	<a class="ajax-link button" href="/todolists/<%= @todolist.id %>/items/sort" data-callback-method="reOrder"> Reorder </a>
+	<a class="ajax-link button" href="/todolists/list" data-callback-method="goBack" data-type="GET"> back </a>
+</div>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>

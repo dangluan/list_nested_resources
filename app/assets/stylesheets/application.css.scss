@@ -1,0 +1,39 @@
+@import "bourbon";
+@import "layout";
+@import "todolists.css.scss";
+img{
+	width:15px; height:15px;
+	padding-right:5px;
+}
+
+*{
+	color:#494c49;font-family:arial , sans-sif;
+}
+a{
+	padding:3px;
+}
+a:hover{
+	color:#00b5d6;
+}
+a:active{
+	color:#494c49;
+}
+.new-form{
+	margin-top:5px;
+}
+
+input{
+	padding-bottom:5px;
+}
+
+.pagination {
+	margin-left : 400px ;
+}
+
+a.previous_page {
+	text-decoration: none;
+}
+
+a.next_page {
+	text-decoration: none;
+}

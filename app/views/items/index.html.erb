@@ -1,0 +1,3 @@
+<% @items.each do |u| %>
+	<li class="item"><%= check_box_tag(u.name,u.id,false,"myid" => u.id)%><span><%= u.name %></span><a class="ajax-link" href="/todolists/<%= @todolist.id %>/items/<%= u.id %>" data-callback-method="deleteElement" data-type="DELETE">delete</a></li>
+<% end %>

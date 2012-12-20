@@ -1,0 +1,15 @@
+<h2> List Detail <h2>
+<%= @todolist.name %>
+<div id="uncheck">
+	<% @uncheck_items.each do |u| %>
+		<%= u.name %>
+	<% end %>
+</div>
+<p><b> list checked : </b></p>
+<div id="checked">
+	<% @uncheck_items.each do |u| %>
+		<%= u.name %>
+	<% end %>
+</div>
+<a class="ajax-link" href="/todolists/<%= @todolist.id %>/items/new" data-callback-method="loadContent" data-type="GET"  > new item </a>
+<%= will_paginate @todolists %>

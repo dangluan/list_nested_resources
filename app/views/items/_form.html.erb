@@ -1,0 +1,5 @@
+<%= form_for(@todolist) do |t| %>
+	<input type="text" name="todolist-name" data-name="<%= t.name %>" id="todolist-name"/>
+	<a class="ajax-link" href="/todolists" data-callback-method="saveList" data-type="POST">create</a>
+	<a class="ajax-link" href="#" data-callback-method="closeForm" data-type="GET">close</a>
+<% end %>

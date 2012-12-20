@@ -1,0 +1,8 @@
+      invoke  active_record
+      create    db/migrate/20121201074955_create_items.rb
+    conflict    app/models/item.rb
+  Overwrite C:/Ruby/my_projects/listnestedresources/app/models/item.rb? (enter "h" for help) [Ynaqdh]        force    app/models/item.rb
+      invoke    test_unit
+   identical      test/unit/item_test.rb
+    conflict      test/fixtures/items.yml
+    Overwrite C:/Ruby/my_projects/listnestedresources/test/fixtures/items.yml? (enter "h" for help) [Ynaqdh]        force      test/fixtures/items.yml

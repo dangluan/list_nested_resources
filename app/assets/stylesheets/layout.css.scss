@@ -1,0 +1,77 @@
+body{
+	margin:0;padding:0;
+	background-color:#FFF;
+	font-size:14px;
+	font-family:$verdana;
+	#{$all-text-inputs} {
+	  border: 1px solid #00b5d6 ;
+		height:25px;
+		margin-bottom:5px;
+	}
+	@include linear-gradient(#e8e2d6  80%,transparent 50%);
+}
+
+#content{
+	width:1200px;
+	margin:0 auto;
+}
+
+ul,li {
+	list-style:none;
+}
+
+#list li{
+	margin-bottom:10px;
+	padding:15px;
+	border:1px solid #a1a1a1;
+	@include transition(all, 1000ms,ease-in-out);
+}
+
+#list li:hover{
+	background-color:#f4edaf ;
+
+}
+
+#list li a.todolists{
+	font-size:18px;
+	color:#00a3dd;
+	font-weight:bold;
+	padding-right:20px;
+	text-decoration:none;
+}
+
+#list li a.delete{
+	font-size:12px;
+	font-weight:italic;
+	color:#a8cee2;
+	text-decoration:none;
+}
+
+#list li a.delete:hover{
+	color:#d81c3f;
+}
+
+#items li span{
+	font-size:18px;
+	color:#00a3dd;
+	font-weight:bold;
+	padding-right:20px;
+	text-decoration:none;
+}
+
+h2{
+	font-size:26px;
+	font-weight:bold;
+	padding:25px;
+	color:white;
+	@include linear-gradient(#215b33 90%,transparent 80%);
+}
+
+.button{
+	@include button(simple,#3FB344);
+	text-decoration:none;
+	font-size:11px;
+}
+.button:hover{
+	font-size:13px;
+}

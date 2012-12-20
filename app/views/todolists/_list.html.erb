@@ -1,0 +1,15 @@
+<% @todolists.each do |t| %>
+		<li>
+			<a class="ajax-link todolists" href="/todolists/<%= t.id %>" data-callback-method="showList"><%= t.name %></a>
+			<a class="ajax-link delete" href="/todolists/<%= t.id %>" data-callback-method="deleteElement" data-type="DELETE">delete</a>
+			<input type="hidden" name="todolist_id" value="<%= t.id %>" id="todolist_id" />
+		</li>
+<% end %>
+<div style="display:none" id="new-form"></div>
+<div class="menu index-todolist-menu">
+	<!-- todolist -->
+	<span>Save file to </span><%= link_to 'Exel', todolists_path(format: "xls")%> / <%= link_to 'CSV', todolists_path(format: "csv")%>
+	<a class="ajax-link button" href="/todolists/new" data-callback-method="loadForm" data-type="GET" data-id="#new-form">new list</a>
+	<a class="ajax-link button" href="/todolists/edit_multiple" data-callback-method="loadForm" data-type="GET" data-id="#list">edit</a>
+</div>
+<%= will_paginate @todolists %>
