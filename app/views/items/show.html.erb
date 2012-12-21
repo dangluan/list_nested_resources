@@ -11,5 +11,4 @@
 		<%= u.name %>
 	<% end %>
 </div>
-<a class="ajax-link" href="/todolists/<%= @todolist.id %>/items/new" data-callback-method="loadContent" data-type="GET"  > new item </a>
-<%= will_paginate @todolists %>
+<a class="ajax-link" href="/todolists/<%= @todolist.id %>/items/new" data-callback-method="loadContent" data-type="GET"  > new item </a<%= will_paginate @todolists %>
